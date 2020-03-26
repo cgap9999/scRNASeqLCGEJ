@@ -413,6 +413,14 @@ pryr::object_size(lun.sce)
 
 ## ----'reproducibility', cache = TRUE, dependson=knitr::all_labels()--------------------------------------------------
 options(width = 120)
+
+
+
+##EXERCISE
+#Leer tabla https://tools.thermofisher.com/content/sfs/manuals/cms_095046.txt con read.delim()
+#Usar los ERCC ID para alinear esta tabla con el objeto sce (ERCC alt experiment)
+#Usar plot() para graficar concentration in Mix 1 (attomoles/ul) vs las cuentas de ERCC de nuestro sce(en alt exp)
+
 cms=read.delim(file="https://tools.thermofisher.com/content/sfs/manuals/cms_095046.txt", header=TRUE, sep="\t", stringsAsFactors=FALSE, row.names = 2)
 head(sce)
 altExp(sce, 'ERCC')
